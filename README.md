@@ -56,10 +56,9 @@ cat testfile.txt | go run main.go > output.txt
 
 ## if you want to extract code to a package
 
-This is what I was fighting with in East London
-Fiddle a bit and see what still works, maybe not all needed, but the way I have it:
+Maybe not all needed, but the way I have it:
 
-* the directory is util and it is "package util"
+* the directory is util and it is "package util". The filenames inside here can be anything, but they all have to declare "package util" I think.
 
 * my func GetWhatIShouldAddOntoTheLine starts with an uppercase so it is visible externally in main. Any other private funcs just start them with lowercase
 
