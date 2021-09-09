@@ -76,8 +76,14 @@ git remote add origin git@github.com:andrewrobinson/process-stdin.git
 git branch -M main
 git push -u origin main
 
-BUT 1st init it locally as a git repo
 
 ```
-git init
+
+git remote add origin git@github.com:andrewrobinson/process-stdin.git
+git add .
+git commit -m 'wip'
+git push
+git push --set-upstream origin master
+
+
 
