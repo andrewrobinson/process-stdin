@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+
+	"github.com/andrewrobinson/process-stdin/util"
 )
 
 func main() {

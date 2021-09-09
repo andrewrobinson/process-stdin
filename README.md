@@ -38,10 +38,16 @@ https://yourbasic.org/golang/read-file-line-by-line/
 
 go build
 cat testfile.txt | ./process-stdin
-
 or 
-
 cat testfile.txt | ./process-stdin > output.txt
+
+
+or if you want to use go run and not produce a binary
+
+
+cat testfile.txt | go run main.go
+
+cat testfile.txt | go run main.go > output.txt
 
 
 ```
@@ -49,12 +55,14 @@ cat testfile.txt | ./process-stdin > output.txt
 ## if you want to extract code to a package
 
 This is what I was fighting with in East London
-Fiddle a bit and see what still works but the way I have it:
+Fiddle a bit and see what still works, maybe not all needed, but the way I have it:
 
-a) the directory is util and it is package util
+a) the directory is util and it is "package util"
 b) my func GetWhatIShouldAddOntoTheLine starts with an uppercase so it is visible externally in main
 c) you HAVE to import it in main using "github.com/andrewrobinson/process-stdin/util"
-d) the github.com/andrewrobinson/process-stdin comes from
+vscode is useless at adding this for you
+
+d) the "github.com/andrewrobinson/process-stdin" there comes from
 
 module github.com/andrewrobinson/process-stdin
 
