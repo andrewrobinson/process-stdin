@@ -2,4 +2,4 @@ These are some
 line of text that I typed in
 
 and  then some
-more
+more and this line has a line break \n I wonder what will happen
