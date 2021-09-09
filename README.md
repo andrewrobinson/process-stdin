@@ -59,13 +59,15 @@ cat testfile.txt | go run main.go > output.txt
 This is what I was fighting with in East London
 Fiddle a bit and see what still works, maybe not all needed, but the way I have it:
 
-a) the directory is util and it is "package util"
-b) my func GetWhatIShouldAddOntoTheLine starts with an uppercase so it is visible externally in main. Any other private funcs just start them with lowercase
-c) you HAVE to import it in main using "github.com/andrewrobinson/process-stdin/util"
+* the directory is util and it is "package util"
+
+* my func GetWhatIShouldAddOntoTheLine starts with an uppercase so it is visible externally in main. Any other private funcs just start them with lowercase
+
+* you HAVE to import it in main using "github.com/andrewrobinson/process-stdin/util"
 vscode is useless at adding this for you and removes it if unused when saving
 I always have to look this up from old projects!
 
-d) the "github.com/andrewrobinson/process-stdin" there comes from
+* the "github.com/andrewrobinson/process-stdin" there comes from
 
 module github.com/andrewrobinson/process-stdin
 
