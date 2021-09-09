@@ -18,15 +18,17 @@ git init
 ## Then I opened up the process-stdin folder in vscode, in its own window
 
 File -> new window
-File -> open -> selec directory
+File -> open -> select directory
+
+VSCode can show you multiple folders and go projects, but for running a main.go
+and making it happy with packages I find it is best to have a window per folder with a go.mod in it
+
 
 ## Then I started typing into the files in vscode
 
 This is your simplest program, and how to run it
 
 https://gobyexample.com/hello-world
-
-the executable produced via go build is more suitable for piping stdin into it
 
 Then I found this:
 
@@ -46,7 +48,7 @@ or if you want to use go run and not produce a binary
 
 
 cat testfile.txt | go run main.go
-
+or
 cat testfile.txt | go run main.go > output.txt
 
 
@@ -58,9 +60,10 @@ This is what I was fighting with in East London
 Fiddle a bit and see what still works, maybe not all needed, but the way I have it:
 
 a) the directory is util and it is "package util"
-b) my func GetWhatIShouldAddOntoTheLine starts with an uppercase so it is visible externally in main
+b) my func GetWhatIShouldAddOntoTheLine starts with an uppercase so it is visible externally in main. Any other private funcs just start them with lowercase
 c) you HAVE to import it in main using "github.com/andrewrobinson/process-stdin/util"
-vscode is useless at adding this for you
+vscode is useless at adding this for you and removes it if unused when saving
+I always have to look this up from old projects!
 
 d) the "github.com/andrewrobinson/process-stdin" there comes from
 
